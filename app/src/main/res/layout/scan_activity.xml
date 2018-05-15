@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:background="@color/titlecolor"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/backarrow_bg" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:text="@string/back"
+                android:id="@+id/back_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="90dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:text="扫一扫"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dbv"
+        app:zxing_framing_rect_width="200dp"
+        app:zxing_framing_rect_height="200dp"
+        app:zxing_preview_scaling_strategy="fitXY"
+        app:zxing_use_texture_view="true"
+        >
+        <TextView
+            android:layout_marginBottom="130dp"
+            android:layout_gravity="center"
+            android:textColor="@color/titlecolor"
+            android:text="将相框对准二维码，即可完成扫描"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+</LinearLayout>
